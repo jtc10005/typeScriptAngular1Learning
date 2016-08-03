@@ -1,0 +1,6 @@
+C:\Projects\typescriptLearning\typescriptLearning\bin\typescriptLearning.dll.config
+C:\Projects\typescriptLearning\typescriptLearning\bin\typescriptLearning.dll
+C:\Projects\typescriptLearning\typescriptLearning\bin\typescriptLearning.pdb
+C:\Projects\typescriptLearning\typescriptLearning\obj\Debug\typescriptLearning.dll
+C:\Projects\typescriptLearning\typescriptLearning\obj\Debug\typescriptLearning.pdb
+C:\Projects\typescriptLearning\typescriptLearning\obj\Debug\typescriptLearning.csprojResolveAssemblyReference.cache

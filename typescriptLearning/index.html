@@ -1,0 +1,79 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="app.css" type="text/css" />
+    <link href="node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="node_modules/toastr/build/toastr.css" rel="stylesheet" />
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="node_modules/toastr/toastr.js"></script>
+    <script src="node_modules/systemjs/dist/system.js"></script>
+
+</head>
+<body>
+    <script>
+        //toastr["success"]("This is a success toastr")
+
+        SystemJS.config({
+            baseURL: './',
+            defaultJSExtensions: true,
+            transpiler: "typescript",
+            paths: {
+                "npm:*": "./node_modules/*"
+            },
+
+            packages: {
+                "scripts": {
+                    "defaultExtension": "ts"
+                },
+                "controllers": {
+                    "defaultExtension": "ts"
+                },
+                "directives": {
+                    "defaultExtension": "ts"
+                }
+            },
+
+            map: {
+
+                "jquery": "node_modules/jquery/dist/jquery.js",
+                "toastr": "node_modules/toastr/toastr.js"
+                //"angular": "github:angular/bower-angular@1.4.4",
+                //"angular-animate": "github:angular/bower-angular-animate@1.4.4",
+                //"angular-route": "github:angular/bower-angular-route@1.4.4",
+                //"angular-sanitize": "github:angular/bower-angular-sanitize@1.4.4",
+                //"angular-touch": "github:angular/bower-angular-touch@1.4.4",
+                //"angular-ui-layout": "github:angular-ui/ui-layout@1.0.5",
+                //"angular-ui-select": "github:angular-ui/ui-select@0.12.1",
+                //"bootstrap": "github:twbs/bootstrap@3.3.5",
+                //"bootstrap3-dialog": "github:nakupanda/bootstrap3-dialog@1.34.5",
+                //"css": "github:systemjs/plugin-css@0.1.13",
+                //"jquery": "node_modules/jquery/dist/jquery.js",
+                //"mbe-nodes": "github:OptimalBPM/mbe-nodes@0.4.10",
+                //"traceur": "github:jmcriffey/bower-traceur@0.0.91",
+                //"traceur-runtime": "github:jmcriffey/bower-traceur-runtime@0.0.91",
+                //"typescript": "npm:typescript@1.6.0-dev.20150824"
+            }
+        });
+
+        
+        SystemJS.import('./node_modules/toastr/toastr.js').then(function (m) {
+            console.log('loading toast');
+        });
+
+        
+        SystemJS.import('./app.js').then(function (m) {
+            console.log('loading app.js');
+        });
+    </script>
+
+    <script src="app.js"></script>
+    <h1>TypeScript HTML App</h1>
+
+    <div id="content"></div>
+</body>
+</html>
